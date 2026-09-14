@@ -25,6 +25,8 @@ body {
 .fuck-image {
 	display: flex;
 	justify-content: center;
+	position: absolute;
+	width: min(15vw, 180px);
 }
 
 .fuck-image img {
@@ -32,4 +34,39 @@ body {
 	width: min(80vw, 400px);
 	max-width: 100%;
 	height: auto;
+}
+
+.image-top-left {
+	top: 16px;
+	left: 16px;
+}
+
+.image-top-right {
+	top: 16px;
+	right: 16px;
+}
+
+.image-middle-left {
+	top: 50%;
+	left: 16px;
+	transform: translateY(-50%);
+}
+
+.image-middle-right {
+	top: 50%;
+	right: 16px;
+	transform: translateY(-50%);
+}
+
+.image-center {
+	top: 50%;
+	left: 50%;
+	width: min(50vw, 400px);
+	transform: translate(-50%, -50%);
+}
+
+.image-bottom-center {
+	bottom: 16px;
+	left: 50%;
+	transform: translateX(-50%);
 }
