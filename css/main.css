@@ -9,17 +9,22 @@ body {
 }
 
 body {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	position: relative;
 	min-height: 100vh;
-	padding: 16px;
+	overflow: hidden;
+}
+
+.image-layout {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
 }
 
 .fuck-image {
 	display: flex;
 	justify-content: center;
-	width: 100%;
+	position: absolute;
+	width: clamp(72px, 15vw, 180px);
 }
 
 .fuck-image img {
@@ -27,4 +32,32 @@ body {
 	width: auto;
 	max-width: 100%;
 	height: auto;
+}
+
+.image-top-left {
+	top: 16px;
+	left: 16px;
+}
+
+.image-top-right {
+	top: 16px;
+	right: 16px;
+}
+
+.image-middle-left {
+	top: 50%;
+	left: 16px;
+	transform: translateY(-50%);
+}
+
+.image-middle-right {
+	top: 50%;
+	right: 16px;
+	transform: translateY(-50%);
+}
+
+.image-bottom-center {
+	bottom: 16px;
+	left: 50%;
+	transform: translateX(-50%);
 }
